@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "http://127.0.0.1:1111"  # Update this with your actual domain when deploying
+base_url = "https://Shanu-Kumawat.github.io/portfolio-site/"
 
 # Site metadata
 title = "Shanu Kumawat - Developer & Explorer"
