@@ -1,0 +1,87 @@
+# The URL the site will be built for
+base_url = "http://127.0.0.1:1111"  # Update this with your actual domain when deploying
+
+# Site metadata
+title = "Shanu Kumawat - Developer & Explorer"
+description = "Third-year engineering student, Flutter developer, open-source enthusiast, and lifelong learner exploring the intersections of code, mechanics, and real-world problem solving"
+default_language = "en"
+
+theme = "terminimal"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+# Generate RSS feed
+generate_feeds = true
+
+# Generate sitemap
+generate_sitemap = true
+
+# Taxonomies (for tags and categories)
+taxonomies = [
+    {name = "tags", feed = true},
+]
+
+[markdown]
+# Enable syntax highlighting for code blocks
+highlight_code = true
+highlight_theme = "base16-ocean-dark"  # Terminal-appropriate theme
+
+[extra]
+# Site author
+author = "Shanu Kumawat"
+
+# Logo text (shown in header)
+logo_text = "~/shanu"
+
+# Theme colors
+accent_color = "red"
+background_color = "dark"
+
+# Contact email (update with your actual email)
+email = "shanu.kumawat@outlook.com"
+
+# Favicon
+favicon = "/favicon.svg"
+
+# Social links
+github = "https://github.com/Shanu-Kumawat"
+linkedin = "https://linkedin.com/in/shanukumawat"
+twitter = "https://x.com/Shanu_Kumawat01"
+
+# Open Graph / Social Sharing
+default_og_image = "https://raw.githubusercontent.com/Shanu-Kumawat/Shanu-Kumawat/main/banner.png"  # Update with actual image when available
+
+# Custom footer HTML
+copyright_html = '''
+<div class="footer-container">
+  <div class="footer-main">
+    <strong>Shanu Kumawat</strong> · Engineering Student & Developer · MNNIT Allahabad
+  </div>
+  <div class="footer-links">
+    <a href="/blog">Posts</a> · <a href="/projects">Projects</a> · <a href="/socials">Contact</a>
+  </div>
+  <div class="footer-meta">
+    © 2025 Shanu Kumawat · Built with <a href="https://www.getzola.org/" target="_blank" rel="noopener noreferrer">Zola</a> and <a href="https://github.com/pawroman/zola-theme-terminimal" target="_blank" rel="noopener noreferrer">Terminimal</a>
+  </div>
+</div>
+'''
+
+# Umami Analytics (privacy-friendly)
+# Uncomment and configure when ready
+# [extra.analytics]
+# umami_website_id = "your-website-id"
+# umami_script_url = "https://analytics.yourdomain.com/script.js"
+
+# Navigation menu
+menu_items = [
+    {name = "About Me", url = "$BASE_URL"},
+    {name = "Journey", url = "$BASE_URL/journey"},
+    {name = "Posts", url = "$BASE_URL/blog"},
+    {name = "Projects", url = "$BASE_URL/projects"},
+    {name = "Socials", url = "$BASE_URL/socials"},
+    {name = "GitHub↗", url = "https://github.com/Shanu-Kumawat", newtab = true},
+]

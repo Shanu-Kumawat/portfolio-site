@@ -1,0 +1,155 @@
+/* Custom post metadata styling */
+.post-meta {
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.post-meta span {
+    white-space: nowrap;
+}
+
+.post-meta a {
+    text-decoration: none;
+}
+
+.post-meta a:hover {
+    opacity: 1 !important;
+    text-decoration: underline;
+}
+
+/* Ensure post content has proper spacing */
+.post-content {
+    margin-top: 1rem;
+}
+
+/* Style the Read more link */
+.post-content > p:last-child a {
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.post-content > p:last-child a:hover {
+    text-decoration: underline;
+}
+
+/* Fix spacing - reduce top margin to match section spacing */
+.content .post {
+    margin-top: 20px;
+}
+
+/* Specific spacing for section title and description */
+.content .post > .post-title:first-child {
+    margin-bottom: 0.5rem;
+}
+
+.content .post > .post-content:first-of-type {
+    margin-bottom: 2rem;
+    /* Removed opacity: 0.8; - was causing color darkening */
+}
+
+/* Better spacing for post listings */
+.post.on-list {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* ============================================
+   NEW FOOTER DESIGN
+   ============================================ */
+
+.footer {
+    margin-top: 80px;
+    padding: 40px 0 30px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-content {
+    max-width: 100%;
+    text-align: center;
+}
+
+/* Main footer line - Name and Location */
+.footer-main {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.footer-name {
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.footer-location {
+    opacity: 0.9;
+}
+
+.footer-sep {
+    opacity: 0.5;
+    margin: 0 0.5rem;
+}
+
+/* Footer navigation links */
+.footer-links {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.footer-links a {
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer-links span {
+    opacity: 0.4;
+    margin: 0 0.5rem;
+}
+
+/* Footer meta - Copyright and credits */
+.footer-meta {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    line-height: 1.6;
+}
+
+.footer-meta a {
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.footer-meta a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Remove old footer styling */
+.footer .copyright {
+    text-align: center;
+    line-height: 1.6;
+}
+
+.footer a {
+    opacity: 0.7;
+}
+
+.footer a:hover {
+    opacity: 1;
+}
+
+/* Social links styling - make platform links red */
+.content strong + .sep + a,
+.content p > a[href^="mailto:"],
+.content p > a[href*="linkedin.com"],
+.content p > a[href*="github.com"],
+.content p > a[href*="dev.to"],
+.content p > a[href*="x.com"],
+.content p > a[href*="reddit.com"] {
+    color: #ff6b6b;
+}

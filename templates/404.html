@@ -1,0 +1,64 @@
+{% extends "index.html" %}
+
+{% block title %}
+404 - Page Not Found | {{ config.title }}
+{% endblock title %}
+
+{% block header_menu %}
+{{ menu_macros::menu_for(config=config, current_item="") }}
+{% endblock header_menu %}
+
+{% block content %}
+<div class="post">
+  <h1 class="post-title">{% block heading %}$ cat /page-not-found{% endblock heading %}</h1>
+  
+  <div class="terminal-output">
+    <pre>
+bash: /page-not-found: No such file or directory
+
+ERROR 404: The requested resource could not be found.
+
+SUGGESTIONS:
+  → Check the URL for typos
+  → Use navigation menu above
+  → Return to <a href="/">home directory</a>
+  → Search the <a href="/blog">blog archives</a>
+  → Browse <a href="/projects">projects</a>
+
+SYSTEM INFO:
+  Timestamp: {{ now() | date(format="%Y-%m-%d %H:%M:%S UTC") }}
+  Status: 404 NOT_FOUND
+
+Need help? <a href="mailto:{{ config.extra.email }}">Contact admin</a>
+    </pre>
+  </div>
+
+  <p style="margin-top: 2rem;">
+    <a href="/">← Back to home</a>
+  </p>
+</div>
+
+<style>
+.terminal-output {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 4px;
+  font-family: 'Hack', monospace;
+}
+
+.terminal-output pre {
+  margin: 0;
+  color: inherit;
+  line-height: 1.6;
+}
+
+.terminal-output a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.terminal-output a:hover {
+  opacity: 0.8;
+}
+</style>
+{% endblock content %}
