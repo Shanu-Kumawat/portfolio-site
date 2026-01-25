@@ -23,12 +23,12 @@
 }
 
 /* Style the Read more link */
-.post-content > p:last-child a {
+.post-content>p:last-child a {
     font-weight: 500;
     text-decoration: underline;
 }
 
-.post-content > p:last-child a:hover {
+.post-content>p:last-child a:hover {
     text-decoration: underline;
 }
 
@@ -38,11 +38,11 @@
 }
 
 /* Specific spacing for section title and description */
-.content .post > .post-title:first-child {
+.content .post>.post-title:first-child {
     margin-bottom: 0.5rem;
 }
 
-.content .post > .post-content:first-of-type {
+.content .post>.post-content:first-of-type {
     margin-bottom: 2rem;
     /* Removed opacity: 0.8; - was causing color darkening */
 }
@@ -144,13 +144,13 @@
 }
 
 /* Social links styling - make platform links red */
-.content strong + .sep + a,
-.content p > a[href^="mailto:"],
-.content p > a[href*="linkedin.com"],
-.content p > a[href*="github.com"],
-.content p > a[href*="dev.to"],
-.content p > a[href*="x.com"],
-.content p > a[href*="reddit.com"] {
+.content strong+.sep+a,
+.content p>a[href^="mailto:"],
+.content p>a[href*="linkedin.com"],
+.content p>a[href*="github.com"],
+.content p>a[href*="dev.to"],
+.content p>a[href*="x.com"],
+.content p>a[href*="reddit.com"] {
     color: #ff6b6b;
 }
 
@@ -163,6 +163,7 @@
     min-height: 1lh;
     width: 100%;
 }
+
 .giallo-ln {
     display: inline-block;
     user-select: none;
@@ -171,4 +172,328 @@
     min-width: 3ch;
     text-align: right;
     opacity: 0.8;
+}
+
+/* ============================================
+   LANDING PAGE POLISH (2025 REFRESH)
+   ============================================ */
+
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    /* Space between sections */
+    padding-bottom: 40px;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+}
+
+.hero-name {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    /* Explicit visible white */
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-role {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--accent);
+    /* Preserving the working red accent */
+    margin: 0;
+    opacity: 1;
+}
+
+.hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1rem;
+    color: #aaaaaa;
+    margin-top: 5px;
+}
+
+.hero-meta .location {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-value {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    max-width: 650px;
+    margin: 15px 0 25px 0;
+}
+
+/* Buttons */
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent);
+    color: #000;
+    /* Contrast on red */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 69, 58, 0.3);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #e0e0e0;
+    border: 1px solid #555;
+}
+
+.btn-secondary:hover {
+    border-color: #fff;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.hero-socials {
+    display: flex;
+    gap: 24px;
+    /* More breathing room */
+    margin-top: 30px;
+}
+
+.hero-socials a {
+    color: #888;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.hero-socials a:hover {
+    color: var(--accent);
+    transform: translateY(-3px) scale(1.1);
+}
+
+.hero-socials svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* --- ABOUT SECTION --- */
+.about-section {
+    max-width: 700px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    opacity: 0.9;
+    border-left: 3px solid var(--accent);
+    padding-left: 20px;
+}
+
+/* --- PROJECTS GRID --- */
+.projects-section {
+    width: 100%;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--fg);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-title::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background: var(--gray);
+    opacity: 0.2;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    /* Subtle border */
+    border-radius: 8px;
+    padding: 24px;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.project-header h4 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--fg);
+}
+
+.project-links a,
+.no-link {
+    color: var(--gray);
+    transition: color 0.2s;
+}
+
+.project-links a:hover {
+    color: var(--accent);
+}
+
+.project-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #cccccc;
+    /* Slightly lighter for better readability */
+    margin-bottom: 24px;
+    flex-grow: 1;
+    /* Pushes tech stack to bottom */
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.tech-stack span {
+    font-size: 0.85rem;
+    /* Increased from 0.75rem */
+    font-family: monospace;
+    /* Developer feel */
+    background: rgba(255, 255, 255, 0.1);
+    color: #eeeeee;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.tech-stack span:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 600px) {
+    .landing-page {
+        gap: 60px;
+    }
+
+    .hero-name {
+        font-size: 2.5rem;
+    }
+
+    .hero-content {
+        gap: 16px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* --- SKILLS SECTION --- */
+.skills-section {
+    margin-top: 40px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.skill-group h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.skill-group p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+/* --- CONTACT SECTION --- */
+.contact-section {
+    margin-top: 40px;
+}
+
+.email-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.email-link:hover {
+    color: var(--fg);
+    text-decoration: underline;
+    transform: translateY(-1px);
 }

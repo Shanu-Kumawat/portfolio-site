@@ -1,0 +1,189 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="landing-page">
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-name">Shanu Kumawat</h1>
+      <h2 class="hero-role">Flutter Developer & Backend Engineer</h2>
+
+      <div class="hero-meta">
+        <span class="location">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          Based in Allahabad, India
+        </span>
+      </div>
+
+      <p class="hero-value">
+        Building real-world systems through code, computation, and curiosity. Specializing in mobile apps, distributed
+        backends, and scalable architecture.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-secondary">View Projects</a>
+        <a href="https://drive.google.com/uc?export=download&id=1L4ilSwQAsv2ddY1kIPTnWtW-yr4S_kHC"
+          class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Download Resume
+        </a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="https://github.com/Shanu-Kumawat" target="_blank" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/shanu-kumawat01/" target="_blank" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+        <a href="mailto:shanu.kumawat@outlook.com" aria-label="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <p>
+      I'm a third-year B.Tech student in Engineering and Computational Mechanics at MNNIT Allahabad, but my true passion
+      lies in building software that solves real problems. I've shipped six production-ready applications using Flutter
+      and am actively expanding into scalable backend systems with Python and Elixir. I thrive on taking ideas from
+      concept to deployed product—learning by shipping, not just studying.
+    </p>
+  </section>
+
+  <section id="projects" class="projects-section">
+    <h3 class="section-title">Selected Work</h3>
+
+    <div class="project-grid">
+
+      <!-- Project 1: Beacon -->
+      <article class="project-card">
+        <div class="project-content">
+          <div class="project-header">
+            <h4>Beacon</h4>
+            <div class="project-links">
+              <a href="https://github.com/Shanu-Kumawat/Beacon" target="_blank" title="Source Code">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                  </path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <p class="project-desc">AR navigation app for visually impaired users with real-time object detection and
+            voice guidance.</p>
+          <div class="tech-stack">
+            <span>Flutter</span>
+            <span>AR Kit</span>
+            <span>TensorFlow Lite</span>
+            <span>Firebase</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2: AgriSage -->
+      <article class="project-card">
+        <div class="project-content">
+          <div class="project-header">
+            <h4>AgriSage</h4>
+            <div class="project-links">
+              <!-- Placeholder for link if available, otherwise just repo -->
+              <span class="no-link" title="Code available locally or upon request">🔒</span>
+            </div>
+          </div>
+          <p class="project-desc">AI-powered agricultural advisory app using on-device ML for crop recommendations in
+            offline rural areas.</p>
+          <div class="tech-stack">
+            <span>Flutter</span>
+            <span>TFLite</span>
+            <span>Google Maps</span>
+            <span>Python</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3: Quickshell Overview -->
+      <article class="project-card">
+        <div class="project-content">
+          <div class="project-header">
+            <h4>Quickshell Overview</h4>
+            <div class="project-links">
+              <a href="https://github.com/Shanu-Kumawat/quickshell-overview" target="_blank" title="Source Code">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                  </path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <p class="project-desc">Standalone workspace overview widget for Hyprland window manager, decoupled from
+            complex dotfiles.</p>
+          <div class="tech-stack">
+            <span>C++</span>
+            <span>Hyprland IPC</span>
+            <span>Qt/QML</span>
+            <span>Linux</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="skills-section">
+    <h3 class="section-title">Technical Arsenal</h3>
+    <div class="skills-container">
+      <div class="skill-group">
+        <h4>Languages</h4>
+        <p>Dart, Python, C++, Elixir, Java, MATLAB</p>
+      </div>
+      <div class="skill-group">
+        <h4>Frameworks</h4>
+        <p>Flutter, FastAPI, Phoenix, TensorFlow</p>
+      </div>
+      <div class="skill-group">
+        <h4>Tools & DevOps</h4>
+        <p>Linux (Arch), Docker, Nginx, Git, Neovim, Nix</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <h3 class="section-title">Get in Touch</h3>
+    <p>
+      Always open to discussing new opportunities or interesting projects.
+      <br>
+      <a href="mailto:shanu.kumawat@outlook.com" class="email-link">shanu.kumawat@outlook.com</a>
+    </p>
+  </section>
+
+</div>
+{% endblock content %}
