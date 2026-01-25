@@ -175,6 +175,24 @@
 }
 
 /* ============================================
+   LAYOUT ADJUSTMENTS
+   ============================================ */
+/* Overriding theme default to give more breathing room */
+.container {
+    max-width: 1000px;
+    /* Reduced from 1100px as requested */
+    padding: 0 40px;
+    /* Ensure some padding on smaller screens */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+
+/* ============================================
    LANDING PAGE POLISH (2025 REFRESH)
    ============================================ */
 
@@ -348,82 +366,120 @@
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    /* Strict 2 columns */
     gap: 24px;
 }
 
 .project-card {
-    background: rgba(255, 255, 255, 0.03);
+    position: relative;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    /* Subtle border */
-    border-radius: 8px;
-    padding: 24px;
-    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 12px;
+    padding: 28px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-3px);
-    border-color: var(--accent);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+.project-card:hover::before {
+    opacity: 1;
 }
 
 .project-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
 .project-header h4 {
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
+    /* Larger title */
     font-weight: 700;
-    color: var(--fg);
+    color: #ffffff;
+    letter-spacing: -0.01em;
 }
 
 .project-links a,
 .no-link {
-    color: var(--gray);
-    transition: color 0.2s;
+    color: #888;
+    transition: all 0.2s;
+    background: rgba(255, 255, 255, 0.05);
+    /* Icon button bg */
+    padding: 6px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-links a:hover {
-    color: var(--accent);
+    color: #fff;
+    background: var(--accent);
 }
 
 .project-desc {
     font-size: 1rem;
     line-height: 1.6;
-    color: #cccccc;
-    /* Slightly lighter for better readability */
+    color: #bbbbbb;
     margin-bottom: 24px;
     flex-grow: 1;
-    /* Pushes tech stack to bottom */
 }
 
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
+    /* Tighter gap for chips */
     margin-top: auto;
+    min-height: 60px;
+    /* Force space for 2 lines to ensure card alignment */
+    align-content: flex-end;
+    /* Align chips to bottom of this space */
 }
 
 .tech-stack span {
-    font-size: 0.85rem;
-    /* Increased from 0.75rem */
+    font-size: 0.75rem;
+    /* Slightly smaller for better fit */
     font-family: monospace;
-    /* Developer feel */
-    background: rgba(255, 255, 255, 0.1);
-    color: #eeeeee;
-    padding: 6px 10px;
-    border-radius: 4px;
-    transition: background 0.2s;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* Outlined style */
+    color: #cccccc;
+    padding: 4px 10px;
+    /* Slightly reduced padding */
+    border-radius: 20px;
+    /* Pill shape */
+    transition: all 0.2s;
+    height: fit-content;
 }
 
 .tech-stack span:hover {
-    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--accent);
+    color: #fff;
+    background: rgba(255, 69, 58, 0.1);
 }
 
 /* --- RESPONSIVE ADJUSTMENTS --- */
