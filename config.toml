@@ -1,34 +1,50 @@
-# The URL the site will be built for
+# The base URL of the site; the only required configuration variable.
 base_url = "https://Shanu-Kumawat.github.io/portfolio-site/"
 
-# Site metadata
+# The site title and description; used in feeds by default.
 title = "Shanu Kumawat - Developer & Explorer"
 description = "Third-year engineering student, Flutter developer, open-source enthusiast, and lifelong learner exploring the intersections of code, mechanics, and real-world problem solving"
+
+# The default language; used in feeds.
 default_language = "en"
 
+# The site theme to use.
 theme = "terminimal"
 
-# Whether to automatically compile all Sass files in the sass directory
+# When set to "true", the Sass files in the `sass` directory in the site root are compiled.
 compile_sass = true
 
-# Whether to build a search index to be used later on by a JavaScript library
-build_search_index = false
-
-# Generate RSS feed
+# When set to "true", a feed is automatically generated.
 generate_feeds = true
 
-# Generate sitemap
+# When set to "true", a search index is built from the pages and section
+# content for `default_language`.
+build_search_index = false
+
+# When set to "false", Sitemap.xml is not generated
 generate_sitemap = true
 
-# Taxonomies (for tags and categories)
+# The taxonomies to be rendered for the site and their configuration of the default languages
 taxonomies = [
     {name = "tags", feed = true},
 ]
 
 [markdown]
-# Enable syntax highlighting for code blocks
-highlight_code = true
-highlight_theme = "base16-ocean-dark"  # Terminal-appropriate theme
+# Whether smart punctuation is enabled (changing quotes, dashes, dots in their typographic form)
+smart_punctuation = true
+
+# Whether to set rel="noopener" for all external links
+external_links_target_blank = true
+
+[markdown.highlighting]
+# When set to "true", missing highlight languages are treated as errors.
+error_on_missing_language = false
+
+# Whether to use inline hex colours (`inline`) or CSS classes (`class`)
+style = "inline"
+
+# Syntax highlighting theme
+theme = "github-dark"
 
 [extra]
 # Site author
@@ -41,8 +57,8 @@ logo_text = "~/shanu"
 accent_color = "red"
 background_color = "dark"
 
-# Contact email (update with your actual email)
-email = "shanu.kumawat@outlook.com"
+# Contact email
+email = "contact@shanukumawat.com"
 
 # Favicon
 favicon = "/favicon.svg"
@@ -53,7 +69,7 @@ linkedin = "https://linkedin.com/in/shanukumawat"
 twitter = "https://x.com/Shanu_Kumawat01"
 
 # Open Graph / Social Sharing
-default_og_image = "https://raw.githubusercontent.com/Shanu-Kumawat/Shanu-Kumawat/main/banner.png"  # Update with actual image when available
+default_og_image = "https://raw.githubusercontent.com/Shanu-Kumawat/Shanu-Kumawat/main/banner.png"
 
 # Custom footer HTML
 copyright_html = '''
@@ -70,12 +86,6 @@ copyright_html = '''
 </div>
 '''
 
-# Umami Analytics (privacy-friendly)
-# Uncomment and configure when ready
-# [extra.analytics]
-# umami_website_id = "your-website-id"
-# umami_script_url = "https://analytics.yourdomain.com/script.js"
-
 # Navigation menu
 menu_items = [
     {name = "About Me", url = "$BASE_URL"},
@@ -85,3 +95,9 @@ menu_items = [
     {name = "Socials", url = "$BASE_URL/socials"},
     {name = "GitHub↗", url = "https://github.com/Shanu-Kumawat", newtab = true},
 ]
+
+# Umami Analytics (privacy-friendly)
+# Uncomment and configure when ready
+# [extra.analytics]
+# umami_website_id = "your-website-id"
+# umami_script_url = "https://analytics.yourdomain.com/script.js"

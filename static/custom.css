@@ -153,3 +153,22 @@
 .content p > a[href*="reddit.com"] {
     color: #ff6b6b;
 }
+
+/* ============================================
+   ZOLA GIALLO SYNTAX HIGHLIGHTING
+   ============================================ */
+/* Essential for correct code block rendering in Zola 0.19+ */
+.giallo-l {
+    display: inline-block;
+    min-height: 1lh;
+    width: 100%;
+}
+.giallo-ln {
+    display: inline-block;
+    user-select: none;
+    margin-right: 0.4em;
+    padding: 0.4em;
+    min-width: 3ch;
+    text-align: right;
+    opacity: 0.8;
+}

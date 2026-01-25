@@ -13,7 +13,7 @@ featured = true
 
 Standalone workspace management module with live previews and drag-and-drop functionality for Hyprland window manager.
 
-**⭐ 20+ GitHub stars** | Featured in Hyprland community discussions
+**⭐ 100+ GitHub stars** | Featured in Hyprland community discussions
 
 <!-- more -->
 
@@ -56,6 +56,6 @@ I learned about Linux desktop customization at a deeper level—working with win
 The project demonstrates that valuable contributions aren't always about building from scratch—sometimes they're about making existing good ideas more accessible and reusable for others.
 
 **Impact:**
-- 20+ GitHub stars and active community usage
+- 100+ GitHub stars and active community usage
 - Featured in Hyprland community discussions and dotfile showcases
 - Smooth 60fps performance with minimal resource usage

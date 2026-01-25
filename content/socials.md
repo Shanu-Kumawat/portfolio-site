@@ -10,7 +10,7 @@ I'm always open to connecting with other developers, exchanging ideas, and learn
 
 ## 💬 Where to Find Me
 
-**Email** — [shanu.kumawat@outlook.com](mailto:shanu.kumawat@outlook.com)  
+**Email** — [contact@shanukumawat.com](mailto:contact@shanukumawat.com)  
 Best for professional inquiries, collaboration proposals, or detailed technical discussions.
 
 **LinkedIn** — [linkedin.com/in/shanu-kumawat01](https://linkedin.com/in/shanu-kumawat01/)  

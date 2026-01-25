@@ -3,6 +3,9 @@ title = "About Me"
 +++
 
 # Hey, I'm Shanu 👋
+
+[**Resume**](https://drive.google.com/file/d/1L4ilSwQAsv2ddY1kIPTnWtW-yr4S_kHC/view?usp=drive_link)
+
 *Building real-world systems through code, computation, and curiosity.*
 
 ---
