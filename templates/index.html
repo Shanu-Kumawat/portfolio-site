@@ -14,110 +14,140 @@
     {%- block open_graph %}{{ head_macros::open_graph(config=config) }}{% endblock open_graph -%}
 
     {%- if config.generate_feeds %}
-        <link rel="alternate" type="application/atom+xml" title="{{ config.title }} Feed" href="{{ get_url(path='atom.xml', trailing_slash=false) | safe }}" />
+    <link rel="alternate" type="application/atom+xml" title="{{ config.title }} Feed"
+        href="{{ get_url(path='atom.xml', trailing_slash=false) | safe }}" />
     {%- endif -%}
 
     {%- if config.extra.favicon %}
-        <link rel="shortcut icon" type="{{ config.extra.favicon_mimetype | default(value="image/x-icon") | safe }}" href="{{ config.extra.favicon | safe }}">
+    <link rel="shortcut icon" type="{{ config.extra.favicon_mimetype | default(value=" image/x-icon") | safe }}"
+        href="{{ config.extra.favicon | safe }}">
     {% endif -%}
 
     {%- block extra_head %}
-    <link rel="stylesheet" href="{{ get_url(path="custom.css", trailing_slash=false) | safe }}">
+    <link rel="stylesheet" href="{{ get_url(path='custom.css', cachebust=true) | safe }}">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{ config.extra.author }}",
+      "url": "{{ config.base_url | safe }}",
+      "jobTitle": "Engineering Student & Software Developer",
+      "description": "{{ config.description }}",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "MNNIT Allahabad"
+      },
+      "sameAs": [
+        "{{ config.extra.github | safe }}",
+        "{{ config.extra.linkedin | safe }}",
+        "{{ config.extra.twitter | safe }}"
+      ],
+      "knowsAbout": [
+        "Distributed Systems",
+        "Backend Architecture",
+        "Systems Engineering",
+        "Open Source Contributor",
+        "Flutter (Software)",
+        "Dart SDK"
+      ]
+    }
+    </script>
     {% endblock extra_head -%}
 </head>
 
 <body class="">
-<div class="container">
-    {% block header %}
-    <header class="header">
-        <div class="header__inner">
-            <div class="header__logo">
-                {%- if config.extra.logo_home_link %}
+    <div class="container">
+        {% block header %}
+        <header class="header">
+            <div class="header__inner">
+                <div class="header__logo">
+                    {%- if config.extra.logo_home_link %}
                     {% set logo_link = config.extra.logo_home_link %}
-                {% else %}
+                    {% else %}
                     {% set logo_link = config.base_url %}
-                {% endif -%}
-                <a href="{{ logo_link | safe }}" style="text-decoration: none;">
-                    <div class="logo">
-                      {% block logo_content %}
-                        {%- if config.extra.logo_text %}
+                    {% endif -%}
+                    <a href="{{ logo_link | safe }}" style="text-decoration: none;">
+                        <div class="logo">
+                            {% block logo_content %}
+                            {%- if config.extra.logo_text %}
                             {{ config.extra.logo_text }}
-                        {% else %}
+                            {% else %}
                             {{ config.title }}
-                        {% endif -%}
-                        {% endblock logo_content %}
-                    </div>
-                </a>
+                            {% endif -%}
+                            {% endblock logo_content %}
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
 
-        {% block header_menu %}
-        {{ menu_macros::menu(config=config, current_path=current_path) }}
-        {% endblock header_menu %}
-    </header>
-    {% endblock header %}
+            {% block header_menu %}
+            {{ menu_macros::menu(config=config, current_path=current_path) }}
+            {% endblock header_menu %}
+        </header>
+        {% endblock header %}
 
-    <div class="content">
-        {% block content %}
-        {%- if section.content %}
-        <div class="post">
-            <div class="post-content">
-                {{ section.content | safe }}
+        <div class="content">
+            {% block content %}
+            {%- if section.content %}
+            <div class="post">
+                <div class="post-content">
+                    {{ section.content | safe }}
+                </div>
             </div>
-        </div>
-        {% else %}
-        <div class="posts">
-            {%- if paginator %}
-                {%- set show_pages = paginator.pages -%}
             {% else %}
+            <div class="posts">
+                {%- if paginator %}
+                {%- set show_pages = paginator.pages -%}
+                {% else %}
                 {%- set show_pages = section.pages -%}
-            {% endif -%}
+                {% endif -%}
 
-            {%- for page in show_pages %}
+                {%- for page in show_pages %}
                 <div class="post on-list">
                     {{ post_macros::header(page=page) }}
-                    {{ post_macros::content(page=page, summary=true, show_only_description=page.extra.show_only_description | default(value=false)) }}
+                    {{ post_macros::content(page=page, summary=true,
+                    show_only_description=page.extra.show_only_description | default(value=false)) }}
                 </div>
-            {% endfor -%}
-            
-            {%- if paginator %}
-            <div class="pagination">
-                <div class="pagination__buttons">
-                {%- if paginator.previous %}
-                    <span class="button previous">
-                        <a href="{{ paginator.previous | safe }}">
-                            <span class="button__icon">←</span>&nbsp;
-                            <span class="button__text">Newer posts</span>
-                        </a>
-                    </span>
-                {% endif -%}
-                {%- if paginator.next %}
-                    <span class="button next">
-                        <a href="{{ paginator.next | safe }}">
-                            <span class="button__text">Older posts</span>&nbsp;
-                            <span class="button__icon">→</span>
-                        </a>
-                    </span>
-                {% endif -%}
+                {% endfor -%}
+
+                {%- if paginator %}
+                <div class="pagination">
+                    <div class="pagination__buttons">
+                        {%- if paginator.previous %}
+                        <span class="button previous">
+                            <a href="{{ paginator.previous | safe }}">
+                                <span class="button__icon">←</span>&nbsp;
+                                <span class="button__text">Newer posts</span>
+                            </a>
+                        </span>
+                        {% endif -%}
+                        {%- if paginator.next %}
+                        <span class="button next">
+                            <a href="{{ paginator.next | safe }}">
+                                <span class="button__text">Older posts</span>&nbsp;
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                        {% endif -%}
+                    </div>
                 </div>
+                {% endif -%}
             </div>
             {% endif -%}
+            {% endblock content %}
         </div>
-        {% endif -%}
-        {% endblock content %}
-    </div>
 
-    {% block footer %}
-    <footer class="footer">
-        <div class="footer__inner">
-            {%- if config.extra.copyright_html %}
+        {% block footer %}
+        <footer class="footer">
+            <div class="footer__inner">
+                {%- if config.extra.copyright_html %}
                 <div class="copyright copyright--user">{{ config.extra.copyright_html | safe }}</div>
-            {% else %}
+                {% else %}
                 <div class="copyright">
                     {%- if config.extra.author %}
-                        <span>© {{ date_macros::now_year() }} {{ config.extra.author }}</span>
+                    <span>© {{ date_macros::now_year() }} {{ config.extra.author }}</span>
                     {% else %}
-                        <span>© {{ date_macros::now_year() }} Powered by <a href="https://www.getzola.org/">Zola</a></span>
+                    <span>© {{ date_macros::now_year() }} Powered by <a href="https://www.getzola.org/">Zola</a></span>
                     {% endif -%}
 
                     <span class="copyright-theme">
@@ -125,14 +155,14 @@
                         Theme: <a href="https://github.com/pawroman/zola-theme-terminimal/">Terminimal</a> by pawroman
                     </span>
                 </div>
-            {% endif -%}
-        </div>
-    </footer>
-    {% endblock footer %}
+                {% endif -%}
+            </div>
+        </footer>
+        {% endblock footer %}
 
-</div>
-{%- block extra_body %}
-{% endblock extra_body -%}
+    </div>
+    {%- block extra_body %}
+    {% endblock extra_body -%}
 </body>
 
 </html>

@@ -11,7 +11,7 @@
 {% block content %}
 <div class="post">
   <h1 class="post-title">{% block heading %}$ cat /page-not-found{% endblock heading %}</h1>
-  
+
   <div class="terminal-output">
     <pre>
 bash: /page-not-found: No such file or directory
@@ -29,7 +29,7 @@ SYSTEM INFO:
   Timestamp: {{ now() | date(format="%Y-%m-%d %H:%M:%S UTC") }}
   Status: 404 NOT_FOUND
 
-Need help? <a href="mailto:{{ config.extra.email }}">Contact admin</a>
+Need help? <a href="/socials">Contact me</a>
     </pre>
   </div>
 
@@ -39,26 +39,26 @@ Need help? <a href="mailto:{{ config.extra.email }}">Contact admin</a>
 </div>
 
 <style>
-.terminal-output {
-  background-color: rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  border-radius: 4px;
-  font-family: 'Hack', monospace;
-}
+  .terminal-output {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    border-radius: 4px;
+    font-family: 'Hack', monospace;
+  }
 
-.terminal-output pre {
-  margin: 0;
-  color: inherit;
-  line-height: 1.6;
-}
+  .terminal-output pre {
+    margin: 0;
+    color: inherit;
+    line-height: 1.6;
+  }
 
-.terminal-output a {
-  color: inherit;
-  text-decoration: underline;
-}
+  .terminal-output a {
+    color: inherit;
+    text-decoration: underline;
+  }
 
-.terminal-output a:hover {
-  opacity: 0.8;
-}
+  .terminal-output a:hover {
+    opacity: 0.8;
+  }
 </style>
 {% endblock content %}

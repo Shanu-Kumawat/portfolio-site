@@ -2,8 +2,8 @@
 base_url = "https://shanukumawat.com"
 
 # The site title and description; used in feeds by default.
-title = "Shanu Kumawat - Developer & Explorer"
-description = "Third-year engineering student, Flutter developer, open-source enthusiast, and lifelong learner exploring the intersections of code, mechanics, and real-world problem solving"
+title = "Shanu Kumawat - Software & Systems Engineer"
+description = "Software & Systems Engineer building scalable backends, distributed systems, and cross-platform applications. MNNIT Allahabad student."
 
 # The default language; used in feeds.
 default_language = "en"
@@ -57,8 +57,6 @@ logo_text = "~/shanu"
 accent_color = "red"
 background_color = "dark"
 
-# Contact email
-email = "contact@shanukumawat.com"
 
 # Favicon
 favicon = "/favicon.svg"
@@ -66,10 +64,10 @@ favicon = "/favicon.svg"
 # Social links
 github = "https://github.com/Shanu-Kumawat"
 linkedin = "https://linkedin.com/in/shanukumawat"
-twitter = "https://x.com/Shanu_Kumawat01"
+twitter = "https://x.com/shanu_builds"
 
 # Open Graph / Social Sharing
-default_og_image = "https://raw.githubusercontent.com/Shanu-Kumawat/Shanu-Kumawat/main/banner.png"
+default_og_image = "https://Shanu-Kumawat.github.io/portfolio-site/og_banner.png"
 
 # Custom footer HTML
 copyright_html = '''
