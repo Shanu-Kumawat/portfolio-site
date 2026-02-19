@@ -1,5 +1,5 @@
 # The base URL of the site; the only required configuration variable.
-base_url = "https://Shanu-Kumawat.github.io/portfolio-site/"
+base_url = "https://shanukumawat.com"
 
 # The site title and description; used in feeds by default.
 title = "Shanu Kumawat - Developer & Explorer"
