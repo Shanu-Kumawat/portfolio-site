@@ -10,10 +10,10 @@ I'm always open to connecting with other developers, exchanging ideas, and learn
 
 ## 💬 Where to Find Me
 
-**Email** — [contact@shanukumawat.com](mailto:contact@shanukumawat.com)  
+**Email** — [shanu.kumawat@outlook.com](mailto:shanu.kumawat@outlook.com)  
 Best for professional inquiries, collaboration proposals, or detailed technical discussions.
 
-**LinkedIn** — [linkedin.com/in/shanu-kumawat01](https://linkedin.com/in/shanu-kumawat01/)  
+**LinkedIn** — [linkedin.com/in/shanukumawat](https://linkedin.com/in/shanukumawat/)  
 Professional networking, project updates, and internship opportunities.
 
 **GitHub** — [github.com/Shanu-Kumawat](https://github.com/Shanu-Kumawat)  
@@ -22,7 +22,7 @@ All my code lives here. Explore repositories, open issues, or contribute to proj
 **Dev.to** — [dev.to/shanu-kumawat](https://dev.to/shanu-kumawat)  
 Technical articles, development stories, and lessons learned from building software.
 
-**X (Twitter)** — [x.com/Shanu_Kumawat01](https://x.com/Shanu_Kumawat01)  
+**X (Twitter)** — [x.com/shanu_builds](https://x.com/shanu_builds)  
 Quick thoughts, project updates, and tech discussions.
 
 **Reddit** — [reddit.com/user/Cursed_Semicolon9357](https://reddit.com/user/Cursed_Semicolon9357)  
